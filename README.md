@@ -1,30 +1,75 @@
-# React + TypeScript + Vite
+# 💼 FLAMAPP – HR Performance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive HR dashboard built with **React**, **TypeScript**, **Tailwind CSS**, and **Vite**.  
+Designed for HR managers to track employee performance, manage bookmarks, and view performance analytics.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 🏠 Homepage (`/`)
+- Fetches **20 employees** from [dummyjson.com](https://dummyjson.com/users?limit=20)
+- **User Cards** display:
+  - Name, Email, Age, Department (randomized)
+  - Performance Rating: ⭐ 1–5 stars
+  - Actions: `View`, `Bookmark`, `Promote`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🔍 Search & Filter
+- Live search by **name**, **email**, or **department**
+- Multi-select filter dropdown for:
+  - **Departments**
+  - **Performance Ratings**
 
-- Configure the top-level `parserOptions` property like this:
+### 👤 Employee Details (`/employee/[id]`)
+- Displays:
+  - Address, Phone, Bio, Past Performance History
+- **Tabbed UI**:
+  - `Overview`, `Projects`, `Feedback`
+- Dynamic content loading per tab
+- Performance shown using stars and color-coded badges
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### 📌 Bookmark Manager (`/bookmarks`)
+- View all bookmarked employees
+- UI actions available:
+  - `Promote`
+  - `Assign to Project`
+  - `Remove from Bookmarks`
+
+### 📊 Analytics (`/analytics`)
+- Interactive charts (mock data):
+  - Department-wise average ratings
+  - Bookmark trends
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Radix UI** (for accessible components)
+
+---
+
+## ⚙️ Getting Started
+```bash
+cd FLAM_TASK1
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 1. Install dependencies
+```bash
+npm install
+```
+### 2. Run the app
+```bash
+npm run dev
+```
+### 3. Open in your browser
+```bash
+http://localhost:5173/
+```
+### ScreenShots
+![alt text](image.png)
+![alt text](image-2.png)
+![alt text](image-1.png)
